@@ -1,0 +1,13 @@
+<!<%- include('./partials/nav') %>
+    <title>category</title>
+<body>
+    <ul>
+    <% menuItems.forEach(function(item) { %>
+      <li>
+        <%= item.name %> , <%= item.price %> ,
+        <%= item.rating %> , <%= item.details %>
+      </li>
+    <% }) %>
+  </ul>
+</body>
+</html>

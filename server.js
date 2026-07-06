@@ -60,6 +60,29 @@ app.get('/', (req, res) => {
     
    })
 });
+app.get('/menu' , (req,res) =>
+{
+ const index= req.params.itemId
+  res.render('menu.ejs',{
+   menu : RESTAURANT.menu
+  }
+    
+
+  )
+})
+app.get('/menu/:category', (req,res) =>{
+ const category = req.params.category
+  const filteredItems = RESTAURANT.menu.filter(item => item.category === category)
+
+  res.render('category.ejs',{
+     menuItems: filteredItems,
+    category: category
+  }
+
+  )
+
+  
+})
 
 
 
