@@ -3,9 +3,10 @@
 <body>
     <ul>
     <% menuItems.forEach(function(item) { %>
-      <li>
-        <%= item.name %> , <%= item.price %> ,
-        <%= item.rating %> , <%= item.details %>
+      <li>name: <%= item.name %> </li> 
+      <li>price: <%= item.price %> </li>
+        <li>rating: <%= item.rating %></li> 
+        <li>details: <%= item.details %></li> 
       </li>
     <% }) %>
   </ul>
